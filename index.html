@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love You ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffd6e0;
+    font-family:'Shadows Into Light', cursive;
+    overflow:hidden;
+}
+
+.wrapper{
+    position:relative;
+    width:500px;
+    height:500px;
+}
+
+input{
+    display:none;
+}
+
+label{
+    position:absolute;
+    width:100px;
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:70px;
+    cursor:pointer;
+    transition:1s;
+    overflow:hidden;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+#titit1 + label{
+    left:0;
+    top:0;
+    border-radius:50%;
+}
+
+#titit2 + label{
+    right:0;
+    top:0;
+    border-radius:50%;
+}
+
+#titit3 + label{
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%) rotate(45deg);
+}
+
+#titit1:checked + label{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background-image:url('photo1.jpg');
+    font-size:0;
+}
+
+#titit2:checked + label{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background-image:url('photo2.jpg');
+    font-size:0;
+}
+
+#titit3:checked + label{
+    width:280px;
+    height:280px;
+    bottom:90px;
+    left:110px;
+    transform:rotate(45deg);
+    background-image:url('photo3.jpg');
+    font-size:0;
+}
+
+.text{
+    position:absolute;
+    bottom:-60px;
+    width:100%;
+    text-align:center;
+    font-size:30px;
+    color:#b30059;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<input type="checkbox" id="titit1">
+<label for="titit1">I</label>
+
+<input type="checkbox" id="titit2">
+<label for="titit2">Love</label>
+
+<input type="checkbox" id="titit3">
+<label for="titit3">You</label>
+
+<div class="text">Click the words ❤️</div>
+
+</div>
+
+</body>
+</html>
