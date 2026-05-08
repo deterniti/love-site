@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>I Love You ❤️</title>
+<title>Я Тебе Кохаю ❤️</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 
 body{
     margin:0;
@@ -14,15 +14,15 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    background:#ffd6e0;
-    font-family:'Shadows Into Light', cursive;
+    background:linear-gradient(135deg,#ffd1dc,#ffe6f0);
     overflow:hidden;
+    font-family:'Comfortaa', cursive;
 }
 
 .wrapper{
     position:relative;
-    width:500px;
-    height:500px;
+    width:600px;
+    height:600px;
 }
 
 input{
@@ -31,92 +31,178 @@ input{
 
 label{
     position:absolute;
-    width:100px;
-    height:100px;
+    width:160px;
+    height:160px;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    font-size:70px;
+
+    font-size:38px;
+    font-weight:bold;
+    color:white;
+
     cursor:pointer;
     transition:1s;
+
+    background:#ff4d88;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
     overflow:hidden;
 
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
+/* Я */
 #titit1 + label{
-    left:0;
-    top:0;
+    left:40px;
+    top:40px;
     border-radius:50%;
 }
 
+/* Тебе */
 #titit2 + label{
-    right:0;
-    top:0;
+    right:40px;
+    top:40px;
     border-radius:50%;
 }
 
+/* Кохаю */
 #titit3 + label{
-    bottom:0;
+    bottom:60px;
     left:50%;
     transform:translateX(-50%) rotate(45deg);
 }
 
+/* Фото 1 */
 #titit1:checked + label{
-    width:300px;
-    height:300px;
+    width:340px;
+    height:340px;
     border-radius:50%;
     background-image:url('photo1.jpg');
     font-size:0;
 }
 
+/* Фото 2 */
 #titit2:checked + label{
-    width:300px;
-    height:300px;
+    width:340px;
+    height:340px;
     border-radius:50%;
     background-image:url('photo2.jpg');
     font-size:0;
 }
 
+/* Фото 3 */
 #titit3:checked + label{
-    width:280px;
-    height:280px;
-    bottom:90px;
-    left:110px;
+    width:320px;
+    height:320px;
+
+    left:140px;
+    bottom:120px;
+
     transform:rotate(45deg);
+
     background-image:url('photo3.jpg');
+
     font-size:0;
 }
 
+/* Текст */
 .text{
     position:absolute;
-    bottom:-60px;
     width:100%;
+    bottom:-30px;
+
     text-align:center;
-    font-size:30px;
-    color:#b30059;
+
+    font-size:28px;
+    color:#cc0066;
+}
+
+.hearts{
+    position:absolute;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+}
+
+.hearts span{
+    position:absolute;
+    color:#ff4d88;
+    animation:float 6s linear infinite;
+    font-size:24px;
+}
+
+.hearts span:nth-child(1){
+    left:10%;
+    animation-delay:0s;
+}
+
+.hearts span:nth-child(2){
+    left:30%;
+    animation-delay:2s;
+}
+
+.hearts span:nth-child(3){
+    left:50%;
+    animation-delay:4s;
+}
+
+.hearts span:nth-child(4){
+    left:70%;
+    animation-delay:1s;
+}
+
+.hearts span:nth-child(5){
+    left:90%;
+    animation-delay:3s;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh);
+        opacity:0;
+    }
+
+    30%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh);
+        opacity:0;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<div class="hearts">
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+    <span>❤️</span>
+</div>
+
 <div class="wrapper">
 
 <input type="checkbox" id="titit1">
-<label for="titit1">I</label>
+<label for="titit1">Я</label>
 
 <input type="checkbox" id="titit2">
-<label for="titit2">Love</label>
+<label for="titit2">Тебе</label>
 
 <input type="checkbox" id="titit3">
-<label for="titit3">You</label>
+<label for="titit3">Кохаю</label>
 
-<div class="text">Click the words ❤️</div>
+<div class="text">
+    Натисни на слова ❤️
+</div>
 
 </div>
 
